@@ -16,9 +16,9 @@ This work is base on this tutorial:
 
 First you need Raspbian. We use Stretch-lite because we want to save space: 
 [Instructions](https://www.raspberrypi.org/documentation/installation/installing-images/
-). BE CAREFUL HERE - if you mess up you ca nwip your hard drive.
+). BE CAREFUL HERE - if you mess up you can wipe your hard drive.
 
-You need to be able to isse commands to the Pi. You're kinda on your own here. It depends on the hardware you have available (Ideally a power supply, ethernet internet and an HDMI screen and USB keyboard). [This](http://blog.cudmore.io/post/2017/11/22/raspian-stretch/) might work for you. 
+You need to be able to issue commands to the Pi. You're kinda on your own here. It depends on the hardware you have available (Ideally a power supply, ethernet internet and an HDMI screen and USB keyboard). [This](http://blog.cudmore.io/post/2017/11/22/raspian-stretch/) might work for you. 
 
 ### Camera module
 You'll need one of [these](https://www.raspberrypi.org/products/camera-module-v2/).
@@ -37,7 +37,7 @@ Installing this sucks. It take ages to download on a shaky internet line and eve
 * You can skip the virtualenv stuff (but it will come back to bite you if you have version issues between numpy, openCV and MXnet)
 * You don't need the contrib stuff
 * That Cmake command didn't work for me. Use `cmake -DENABLE_PRECOMPILED_HEADERS=OFF ` as suggested [here](https://github.com/opencv/opencv/issues/6517)
-* Make EXTRA SURE of the numoy version in the output of cmake
+* Make EXTRA SURE of the numpy version in the output of cmake
 * That swap size hint is SUPER IMPORTANT -DO IT.
 * Once you're done, CHANGE IT BACK TO `CONF_SWAPSIZE=100`
 * You can try `make -j4`, but keep an eye on memory while you kill 2-4 hours. 
@@ -62,7 +62,7 @@ Unfortunately, there are many typos.
 
 Use the code in this repo instead of theirs, which is broken. Do they even test this stuff? I mean they forgot to `import time`, seriously?
 
-The code in this repo is ugly, and needs love, but has been tested and it should work. You should clone it, downlod it or scp it onto your Pi.
+The code in this repo is ugly, and needs love, but has been tested and it should work. You should clone it, download it or scp it onto your Pi.
 
 Before you get there, you will have to change `Inception_BN-0039.params` to whatever the new number is. 
 
@@ -72,9 +72,9 @@ Also make a copy of the `Inception_BN-0039.symbols` replacing the underscore wit
 
 ## 3: Startup
 
-If you made it this far (I only did because it was late and I had a deadline and 50 students I couldn't dissapoint), you rock.
+If you made it this far (I only did because it was late and I had a deadline and 50 students I couldn't disappoint), you rock.
 
-everythinf should now work. You just need to 
+everything should now work. You just need to 
 `mkdir pictures`
 and 
 `mkdir predictions` and then run `python run_models.py`
@@ -88,7 +88,7 @@ It helps if your motion sensor and camera are pointed at the same thing :)
 This is really version 0. It's just the barebones to get started. There are a LOT of things that can be done to improve this shaky first attempt:
 
 * Transfer learning: retrain the network on the classes you care about
-* Pre-process images: the camera is super wide angle, this biases the prediction toward scenes rather thna particualr objects. Just crop out the middle of the image
+* Pre-process images: the camera is super wide angle, this biases the prediction toward scenes rather than particular objects. Just crop out the middle of the image
 * Two motion sensors: fewer false positives by only predicting when both trigger
 * Better models (like YOLO for example)
 * Remove dependency on OpenCV and MXNet - both are a total pain to install on a Pi.
