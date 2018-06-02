@@ -2,7 +2,9 @@
 
 This repo contains the code and notes on running Inception net on a Raspberry Pi 3B. You also need a Raspberry PI motion sensor and a camera.
 
-It was used to deploy a camera trap in the Dedan Kimathi University Nature Reserve at Data Science Africa 2018 in Nyeri, Kenya.
+It was used to deploy a camera trap in the Dedan Kimathi University Nature Reserve at Data Science Africa 2018 in Nyeri, Kenya. Many Thanks to Ciira Maina for hosting us and for his hard work here!
+
+Also Jan Jongboom and Gen-Tao Chiang provided invaluable hardware and software support.
 
 ## 1: Setup
 
@@ -77,6 +79,8 @@ everythinf should now work. You just need to
 and 
 `mkdir predictions` and then run `python run_models.py`
 
+It's best to run it with `screen` so that it runs in the background. 
+ 
 It helps if your motion sensor and camera are pointed at the same thing :)
 
 ## Parting thoughts
