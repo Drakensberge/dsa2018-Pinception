@@ -70,6 +70,8 @@ Also make a copy of the `Inception_BN-0039.params` replacing the underscore with
 
 Also make a copy of the `Inception_BN-0039.symbols` replacing the underscore with a dash.
 
+If you have a problem with numpy versions, the advice [here](https://blog.csdn.net/xiaoyezi_1834/article/details/50996006) solved it for me. 
+
 ## 3: Startup
 
 If you made it this far (I only did because it was late and I had a deadline and 50 students I couldn't disappoint), you rock.
