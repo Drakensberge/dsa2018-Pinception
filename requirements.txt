@@ -1,6 +1,6 @@
 certifi==2018.4.16
 chardet==3.0.4
-cryptography==1.7.1
+cryptography==3.2
 enum34==1.1.6
 graphviz==0.8.3
 idna==2.6
